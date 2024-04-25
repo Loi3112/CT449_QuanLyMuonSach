@@ -1,0 +1,42 @@
+.left {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.products {
+
+    &-form {
+        @extend .left;
+        font-size: 16px;
+        gap: 5px;
+
+        &__btn {
+            background-color: transparent;
+            border: none;
+            font-size: inherit;
+        }
+
+        &__select {
+            font-size: inherit;
+            background-color: transparent;
+            border: 1px solid #000;
+            padding: 0 6px;
+            border-radius: 2px;
+        }
+    }
+
+    &-address {
+        font-style: italic;
+        color: dimgray;
+
+        span {
+            font-weight: 600;
+        }
+    }
+}

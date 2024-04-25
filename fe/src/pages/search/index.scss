@@ -1,0 +1,76 @@
+.start {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.home {
+    position: relative;
+    height: calc(100vh - 62px - 44px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 20px 0;
+
+    &-form {
+        .home-search {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #000;
+            border-radius: 5px;
+            overflow: hidden;
+
+            input {
+                border: none;
+                flex: 1;
+                padding: 6px 10px;
+                font-size: 16px;
+
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+
+            button {
+                padding: 6px 20px;
+                border: none;
+            }
+        }
+
+        &__group {
+            @extend .start;
+            gap: 20px;
+            padding-top: 10px;
+
+            .home-check {
+                @extend .start;
+                gap: 6px;
+
+                label {
+                    cursor: pointer;
+                    color: #71829b;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .filter {
+        display: flex;
+        justify-content: flex-end;
+        gap: 5px;
+
+        &__btn {
+            background-color: transparent;
+            border: none;
+            font-size: inherit;
+        }
+
+        &__select {
+            font-size: inherit;
+            background-color: transparent;
+            border: 1px solid #000;
+            padding: 0 6px;
+            border-radius: 2px;
+        }
+    }
+}

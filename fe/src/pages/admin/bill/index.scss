@@ -1,0 +1,169 @@
+.table {
+    th {
+        font-weight: 600;
+    }
+
+    &-btn {
+        background-color: transparent;
+        border: none;
+        font-size: 18px;
+        padding: 4px 10px;
+        color: #fff;
+        border-radius: 4px;
+        transition: 0.3s;
+        background-color: #2ecc71;
+        display: inline-block;
+
+        &:hover {
+            opacity: 0.9;
+        }
+
+        &--add {
+            background-color: #3498db;
+        }
+
+        &--edit {
+            background-color: #fbc531;
+        }
+    }
+
+    :not(.table-btn:first-child, i) {
+        margin-left: 10px;
+    }
+}
+
+.modal {
+    z-index: 9999;
+}
+
+.modal-backdrop.show {
+    display: none;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin {
+    &-info {
+        @extend .center;
+        justify-content: space-between;
+
+        p {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: dimgray;
+
+            span {
+                font-weight: 600;
+                color: #000;
+            }
+        }
+    }
+
+    &-dots {
+        @extend .center;
+        margin-top: 15px;
+        margin-bottom: 20px;
+
+        &__list {
+            @extend .center;
+            gap: 10px;
+
+            li {
+                @extend .center;
+                --size: 40px;
+                width: var(--size);
+                height: var(--size);
+                border-radius: 5px;
+                font-size: 16px;
+                font-weight: 600;
+                color: #000;
+                border: 1px solid currentColor;
+                transition: 0.3s;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            li.active,
+            li:hover {
+                color: #fff;
+                background-color: #000;
+                border-color: #000;
+            }
+        }
+    }
+
+    &-modal {
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 10px;
+
+            img {
+                width: 150px;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            div {
+                flex: 1;
+                font-size: 16px;
+
+                span {
+                    font-size: inherit;
+                    display: block;
+                    font-weight: 600;
+
+                    small {
+                        font-size: 15px;
+                        font-weight: normal;
+                        color: dimgray;
+                    }
+                }
+            }
+        }
+
+        &__title {
+            font-size: 20px;
+        }
+
+        &__text {
+            font-size: 14px;
+            color: dimgray;
+            padding-bottom: 0;
+            height: 120px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+    }
+
+    &-form {
+        &__group {
+            position: relative;
+
+            label {
+                position: absolute;
+                top: -12px;
+                left: 10px;
+                background-color: #fff;
+                padding: 0 4px;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 6px 10px;
+                border: 1px solid #222;
+                border-radius: 5px;
+
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+        }
+    }
+}

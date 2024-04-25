@@ -1,0 +1,36 @@
+.admin {
+    &-title {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    &-sub {
+        font-size: 16px;
+        color: dimgray;
+    }
+
+    &-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        border: 0px solid #e7e7e7;
+        padding: 25px 0;
+        border-radius: 5px;
+
+        &__icon {
+            font-size: 35px;
+        }
+
+        &__number {
+            color: #455a64;
+            font-size: 24px;
+        }
+
+        &__text {
+            color: #99abb4;
+            font-size: 16px;
+        }
+    }
+}

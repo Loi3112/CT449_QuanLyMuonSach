@@ -1,0 +1,66 @@
+.admin {
+    &-form {
+        &__group {
+            position: relative;
+
+            label {
+                position: absolute;
+                top: -12px;
+                left: 10px;
+                background-color: #fff;
+                padding: 0 4px;
+            }
+
+            input {
+                width: 100%;
+                padding: 6px 10px;
+                border: 1px solid #222;
+                border-radius: 5px;
+                background-color: #fff;
+
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+        }
+
+        &__btn {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            button {
+                padding: 6px 30px;
+                border: 1px solid #000;
+                background-color: transparent;
+                color: #000;
+                transition: 0.3s;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &-password {
+        display: flex;
+        width: 100%;
+        border: 1px solid #222;
+        border-radius: 5px;
+
+        input {
+            width: unset;
+            border: none;
+            flex: 1;
+        }
+
+        &__btn {
+            display: block;
+            padding: 6px 10px;
+            cursor: pointer;
+        }
+    }
+}
