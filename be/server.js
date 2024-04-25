@@ -18,15 +18,20 @@ app.use(function (req, res, next) {
     next()
 })
 
-// Connect database
 connectDB()
 
 const path = (name) => `/api/v1/${name}`
+
 app.use(path('docGia'), require('./routes/docGia'))
+
 app.use(path('nhanVien'), require('./routes/nhanVien'))
+
 app.use(path('nhaXuatBan'), require('./routes/nhaXuatBan'))
+
 app.use(path('hinhAnh'), require('./routes/hinhAnh'))
+
 app.use(path('sach'), require('./routes/sach'))
+
 app.use(path('theoDoiMuonSach'), require('./routes/theoDoiMuonSach'))
 
 
